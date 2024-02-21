@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./HomeProduct.scss";
 import { Link } from "react-router-dom";
+// import { getAllProduct } from "../../service/productService";
 import { getAllProduct } from "../../service/productService";
 import { toast } from "react-toastify";
 import logoSGV from "../../assets/images/next-link.svg";
-import ItemProductCart from "../card/ItemProductCart";
+// import ItemProductCart from "../card/ItemProductCart";
 import SellingProducts from "./SellingProducts";
+import ItemProductCart from "../card/ItemProductCart";
 
 function HomeProduct(props) {
   const [getProductByNike, setGetProductByNike] = useState([]);

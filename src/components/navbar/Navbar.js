@@ -1,40 +1,40 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
 import { Link, NavLink } from "react-router-dom";
-import DropMenu from "../../pages/UserDashboard/DropdownMenu/DropMenu";
+// import DropMenu from "../../pages/UserDashboard/DropdownMenu/DropMenu";
 // import { IoPersonCircleOutline } from "react-icons/io5";
 // import { FaShoppingCart } from "react-icons/fa";
 // import { getAllProductInCart } from "../../service/productService";
-import { IoPersonCircleOutline } from "react-icons/io5";
-import { FaShoppingCart } from "react-icons/fa";
-import { getAllProductInCart } from "../../service/productService";
-import { useDispatch, useSelector } from "react-redux";
-import { setProducts } from "../../redux/cartSlice";
-import { toast } from "react-toastify";
-import { getAllProductsInCart } from "../../utils/utils";
+// import { IoPersonCircleOutline } from "react-icons/io5";
+// import { FaShoppingCart } from "react-icons/fa";
+// import { getAllProductInCart } from "../../service/productService";
+// import { useDispatch, useSelector } from "react-redux";
+// import { setProducts } from "../../redux/cartSlice";
+// import { toast } from "react-toastify";
+// import { getAllProductsInCart } from "../../utils/utils";
 
 function Navbar(props) {
-  const [user, setUser] = useState({});
-  useEffect(() => {
-    // Kiểm tra xem có thông tin người dùng trong Local Storage không
-    const storedUser = localStorage.getItem("user");
+  //   const [user, setUser] = useState({});
+  //   useEffect(() => {
+  //     // Kiểm tra xem có thông tin người dùng trong Local Storage không
+  //     const storedUser = localStorage.getItem("user");
 
-    // Nếu có, chuyển đổi chuỗi JSON thành đối tượng và cập nhật state
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
-  }, []);
+  //     // Nếu có, chuyển đổi chuỗi JSON thành đối tượng và cập nhật state
+  //     if (storedUser) {
+  //       setUser(JSON.parse(storedUser));
+  //     }
+  //   }, []);
 
-  const [openProfile, setOpenProfile] = useState(false);
-  const cartProducts = useSelector((state) => state.cart.cartProducts.data);
-  const dispatch = useDispatch();
+  //   const [openProfile, setOpenProfile] = useState(false);
+  //   const cartProducts = useSelector((state) => state.cart.cartProducts.data);
+  //   const dispatch = useDispatch();
 
-  useEffect(() => {
-    getAllProductsInCart(user?.id, dispatch, toast);
-  }, [user?.id]);
-  const handleOnChangeMenu = () => {
-    setOpenProfile(true);
-  };
+  //   useEffect(() => {
+  //     getAllProductsInCart(user?.id, dispatch, toast);
+  //   }, [user?.id]);
+  //   const handleOnChangeMenu = () => {
+  //     setOpenProfile(true);
+  //   };
 
   return (
     <header className="z-40">
@@ -86,11 +86,11 @@ function Navbar(props) {
               />
             </svg>
           </Link>
-          <p className="absolute top-0 right-0 translate-x-[50%] translate-y-[-50%] px-1 font-semibold text-[14px] bg-white border rounded-full">
+          {/* <p className="absolute top-0 right-0 translate-x-[50%] translate-y-[-50%] px-1 font-semibold text-[14px] bg-white border rounded-full">
             {cartProducts?.length || 0}
-          </p>
+          </p> */}
         </div>
-        {user?.email ? (
+        {/* {user?.email ? (
           <div className="relative flex items-center justify-center ">
             <span onClick={() => setOpenProfile((prev) => !prev)}>
               <svg
@@ -110,13 +110,13 @@ function Navbar(props) {
             </span>
             {openProfile && <DropMenu />}
           </div>
-        ) : (
-          <NavLink to={"/login"}>
+        ) : ( */}
+        {/* <NavLink to={"/login"}>
             <button className="px-3 py-2 text-white bg-[#44bece] rounded-md">
               Đăng nhập
             </button>
           </NavLink>
-        )}
+        )} */}
       </div>
 
       {/* <DropMenu /> */}
