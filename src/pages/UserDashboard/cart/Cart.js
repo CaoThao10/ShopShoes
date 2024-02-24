@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Cart.scss";
 import { Link, NavLink } from "react-router-dom";
-import Navbar from "../../../components/navbar/Navbar";
+// import Navbar from "../../../components/navbar/Navbar";
 import {
   addToCart,
   createOrder,
@@ -10,10 +10,13 @@ import {
   removeproductcart,
 } from "../../../service/productService";
 import { toast } from "react-toastify";
+// import { convertBase64ToImage } from "../../../assets/data/image";
 import { convertBase64ToImage } from "../../../assets/data/image";
 import Swal from "sweetalert2";
 import { useDispatch, useSelector } from "react-redux";
+// import { setProducts } from "../../../redux/cartSlice";
 import { setProducts } from "../../../redux/cartSlice";
+import Navbar from "../../../components/navbar/Navbar";
 
 function Cart(props) {
   const dispatch = useDispatch();

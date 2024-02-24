@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./Login.scss";
 import Navbar from "../../../components/navbar/Navbar";
 import { Link, useNavigate } from "react-router-dom";
-import Footer from "../../../components/footer/Footer";
+// import Footer from "../../../components/footer/Footer";
 import { toast } from "react-toastify";
+import Footer from "../../../components/footer/Footer";
 import { loginUser } from "../../../service/userService";
 import { login } from "../../../utils/utils";
 

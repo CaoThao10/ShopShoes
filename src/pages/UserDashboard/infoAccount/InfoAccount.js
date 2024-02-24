@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Navbar } from "../../../components";
+// import { Navbar } from "../../../components";
 import "./Info.scss";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 import { getOrderById, updateOrder } from "../../../service/productService";
 import { editCustomer } from "../../../service/userService";
 import Swal from "sweetalert2";
+import Navbar from "../../../components/navbar/Navbar";
 
 const InfoAccount = () => {
   const [user, setUser] = useState({});

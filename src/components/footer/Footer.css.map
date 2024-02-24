@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "sources": [
+    "Footer.scss",
+    "Footer.css"
+  ],
+  "names": [],
+  "mappings": "AAEA;EACI,qBAAA;ACDJ",
+  "file": "Footer.css"
+}
