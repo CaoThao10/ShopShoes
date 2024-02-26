@@ -11,6 +11,7 @@ import InfoAccount from "./pages/UserDashboard/infoAccount/InfoAccount";
 import SaleProduct from "./components/Sale/SaleProduct";
 import Accessory from "./components/accessory/Accessory";
 import Contact from "./components/contact/Contact";
+import AdminLayout from "./pages/AdminDashboard/AdminLayout";
 
 function App() {
   return (
@@ -30,6 +31,17 @@ function App() {
           <Route path="/accessory" element={<Accessory />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Route path="/admin" element={<AdminLayout />}>
+          {/* <Route path="home" element={<HomeProduct />} /> */}
+          {/* <Route path="manage-user" element={<ManageCustomer />} />
+          <Route path="manage-order" element={<ManageOrder />} />
+          <Route path="manage-product" element={<ManageProduct />} />
+          <Route path="create-product" element={<CreateProduct />} />
+          <Route path="edit-product/:id" element={<CreateProduct />} />
+          <Route path="manage-customer" element={<ManageUser />} />
+          <Route path="supplier" element={<Supplier />} />
+          <Route path="manage-notification" element={<ManageNotification />} /> */}
+        </Route>
       </BrowserRouter>
     </>
   );
